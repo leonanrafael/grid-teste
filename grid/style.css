@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container1{
+  display: grid; /*gera um grid do tipo block*/
+  background-color: beige;
+  padding: 20px;
+  gap: 10px;
+
+  /*item filho do container*/
+  .item{
+    background-color: white;
+    padding: 10px;
+    p{
+      font-size: 40px;
+      padding: 24px;
+    }
+    
+  }
+  .test{ /*Aqui eu transformei uma celula do grid em um display flexivel*/
+    display: flex;
+    
+    justify-content: space-around;
+    gap: 10px;
+    
+    p{
+      font-size: 30px;
+    }
+    
+    .test-filho{
+      background-color: beige;
+      gap: 10px;
+    }
+  }
+  
+}
+
+.container2{
+  display: grid; /*grid com elementos em display block*/
+  grid-template-columns: 50% 50%; /*Aqui eu disse que queria cada coluna ocupando 50% do espaço disponivel*/
+  background-color: beige;
+  gap: 10px;
+  padding: 10px 20px;
+
+  .item{ /*Estilização da classe intem dentro do container2*/
+    background-color: white;
+    padding: 24px;
+    font-size: 30px;
+  }
+}
+
+@media screen and  (max-width: 480px) {
+  /*Aqui quando a janela de vizualização for menor que 480px, as seguintes regras de estilo serão executadas*/
+  .container2 {
+    display: grid;
+    grid-template-columns: 50%  50%; /*cada coluna ocupa 50% do espaço disponivel na tela*/
+    
+    background-color: palevioletred;
+    padding: 5px;
+    gap: 5px;
+    
+    .item{
+      font-size: 20px;
+      padding: 10px;
+      align-items: center;
+    }
+   
+  }
+
+   .test{
+    flex-direction: column;
+     p {
+      background-color: rgba(119, 0, 255, 0.644);
+    }
+    }
+}
+
+@media screen and  (min-width:481px) and (max-width: 768px) {
+  .container2 {
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: blueviolet;
+    padding: 5px;
+    gap: 5px;
+    
+    .item{
+      font-size: 25px;
+      padding: 10px;
+      align-items: center;
+    } 
+  }
+  
+   .test{
+    flex-direction: column;
+    p {font-size: 40px;
+      background-color: red;
+    }
+  }
+}
+
+@media screen and  (min-width:768px) and (max-width: 1024px){
+
+  .container2{
+    grid-template-columns: 100%;
+  }
+  .test{
+    flex-direction: column;
+    p {font-size: 40px;
+      background-color: rgba(119, 0, 255, 0.811) ;
+    }
+  }
+
+ 
+}
