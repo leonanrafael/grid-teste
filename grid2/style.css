@@ -2,16 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+    
   
 }
 
 .container{
-  
-  padding: 8px;
+  background-color: black;
+  justify-content: center;
   display: grid;
-  grid-template-columns: 30% 65%;
-  grid-template-rows: 80px 680px 160px 60px;
+  grid-template-columns: 33% 65%;
+  grid-template-rows: 80px auto 160px 60px;
   grid-template-areas: "header header"
                         "sidenav main"
                         "section section"
@@ -23,14 +23,22 @@
 }
 
 .header{
+  background-image: url(./image/backgroud.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center center ;
+  display: inline-block;
+  position: fixed;
+  width: 100%;
   grid-area: header;
-  background-color:rgba(137, 43, 226, 0.247);
+ 
   align-items: center;
   align-content: center;
   padding: 0px 8px;
 
   .headercontainer{
     display: flex;
+    
     justify-content: space-between;
     align-content: center;
     text-align: center;  
@@ -42,6 +50,7 @@
   height: 60px;
   border-radius: 50%;
   padding: 8px;
+  
 
   }
 
@@ -79,7 +88,68 @@
 
 .sidenav{
   grid-area: sidenav;
-  background-color: antiquewhite;
+  color: antiquewhite;
+  gap: 10px;
+  
+
+  .sidcontainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: antiquewhite;
+      gap: 10px;
+      
+      
+      h1{
+        font-size: 20px;
+        background-color: red;
+        padding: 8px;
+        
+        border-radius: 10px;
+        text-align: center;
+      }
+      span{
+        font-size: 28px;
+        color: black;
+      }
+  }
+
+  .siditem{
+    display: flex;
+    align-items: center;/*mecher aqui na responsividade*/
+    flex-direction: row;/*mecher aqui na responsividade*/
+    flex-wrap: nowrap;/*mecher aqui na responsividade*/
+    color:antiquewhite;
+    padding: 10px;
+    gap: 1rem;
+    span{
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+      }
+    
+    
+    
+    img{
+      min-width: 300px; /*mecher aqui na responsividade para px*/
+      max-height: 200px; /*mecher aqui na responsividade para px*/
+      border-radius: 100px 10px 10px 10px;
+    }
+    
+    p{
+      font-size: 20px;
+    }
+
+    a{
+      text-decoration: none;
+      color:red ;
+      background-color: rgb(250, 235, 215);
+      border-radius: 4px;
+      padding: 1px;
+
+    }
+    
+  }
 }
 
 .main{
