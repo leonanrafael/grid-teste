@@ -1,172 +1,290 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-    
-  
 }
 
-.container{
+.container {
   background-color: black;
   justify-content: center;
   display: grid;
   grid-template-columns: 33% 65%;
-  grid-template-rows: 80px auto 160px 60px;
-  grid-template-areas: "header header"
-                        "sidenav main"
-                        "section section"
-                        "footer footer";
-  
+  grid-template-rows: 80px auto auto 60px;
+  grid-template-areas:
+    "header header"
+    "sidenav main"
+    "section section"
+    "footer footer";
+
   gap: 0.8rem;
-  
-  
 }
 
-.header{
-  background-image: url(./image/backgroud.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position:center center ;
-  display: inline-block;
-  position: fixed;
+.header {
+  
   width: 100%;
   grid-area: header;
- 
+
   align-items: center;
   align-content: center;
-  padding: 0px 8px;
-
-  .headercontainer{
-    display: flex;
-    
-    justify-content: space-between;
-    align-content: center;
-    text-align: center;  
-    
-  }
-
-  .hfilhos img{
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  padding: 8px;
   
 
+  .headercontainer {
+    display: flex;
+    
+    justify-content: end;
+    align-content: center;
+    text-align: center;
+    align-items: center;
   }
 
-  .nav{
+
+  .nav {
     padding: 0rem;
     align-items: center;
 
-    ol{
+    ol {
       display: flex;
-      
+
       gap: 1rem;
       list-style: none;
       padding: 8px;
       height: 60px;
-     text-align: center;
+      text-align: center;
       align-items: center;
     }
 
-    li{
+    li {
       background-color: black;
-      padding: 0.5rem;
+      padding: 1rem;
       border-radius: 8px;
-      
-      a{
+      font-size: 32px;
+      li:houver{
+        background-color: #8B0000;
+      }
+      a {
         color: antiquewhite;
         text-decoration: none;
-          
       }
     }
-
   }
-  
-  
 }
 
-.sidenav{
+.sidenav {
   grid-area: sidenav;
   color: antiquewhite;
-  gap: 10px;
-  
 
-  .sidcontainer{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: antiquewhite;
-      gap: 10px;
-      
-      
-      h1{
-        font-size: 20px;
-        background-color: red;
-        padding: 8px;
-        
-        border-radius: 10px;
-        text-align: center;
-      }
-      span{
-        font-size: 28px;
-        color: black;
-      }
+  gap: 10px;
+
+  .sidcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: antiquewhite;
+    gap: 10px;
+
+    h1 {
+      font-size: 20px;
+      background-color: red;
+      padding: 8px;
+
+      border-radius: 10px;
+      text-align: center;
+    }
+    span {
+      font-size: 28px;
+      color: black;
+    }
   }
 
-  .siditem{
+  .siditem {
+    border: solid 1px antiquewhite;
     display: flex;
-    align-items: center;/*mecher aqui na responsividade*/
-    flex-direction: row;/*mecher aqui na responsividade*/
-    flex-wrap: nowrap;/*mecher aqui na responsividade*/
-    color:antiquewhite;
+    align-items: center; /*mecher aqui na responsividade*/
+    flex-direction: row; /*mecher aqui na responsividade*/
+    flex-wrap: nowrap; /*mecher aqui na responsividade*/
+    color: antiquewhite;
     padding: 10px;
     gap: 1rem;
-    span{
-        font-size: 24px;
-        font-weight: bold;
-        color: red;
-      }
-    
-    
-    
-    img{
+    span {
+      font-size: 24px;
+      font-weight: bold;
+      color: red;
+    }
+
+    img {
       min-width: 300px; /*mecher aqui na responsividade para px*/
       max-height: 200px; /*mecher aqui na responsividade para px*/
       border-radius: 100px 10px 10px 10px;
     }
-    
-    p{
+
+    p {
       font-size: 20px;
     }
 
-    a{
+    a {
       text-decoration: none;
-      color:red ;
+      color: red;
       background-color: rgb(250, 235, 215);
       border-radius: 4px;
       padding: 1px;
-
     }
-    
   }
 }
 
-.main{
+.main {
   grid-area: main;
-  background-color: antiquewhite;
+  background-color: black;
 
+  .maincontainer {
+    display: flex;
+    padding: 0 30px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+    .section1 {
+      background-color: red;
+      padding: 0px 16px;
+      border-radius: 10px;
+      align-items: center;
+      text-align: center;
+
+      h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 24px;
+        span {
+          font-size: 30px;
+        }
+      }
+
+      span {
+        color: antiquewhite;
+      }
+    }
+  }
+
+  .section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: antiquewhite;
+    gap: 8px;
+
+    img {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      padding: 16px;
+    }
+    p {
+      text-transform: capitalize;
+      background-color: red;
+      font-weight: bold;
+      padding: 8px;
+      font-size: 24px;
+      border-radius: 10px;
+      span {
+        font-size: 30px;
+        color: black;
+        font-weight: bold;
+      }
+    }
+
+    h3 {
+      background-color: red;
+      border-radius: 10px;
+      padding: 8px;
+      font-size: 32px;
+      line-height: 0.8;
+    }
+  }
 }
 
-.section{
+.section {
+  
   grid-area: section;
-  background-color: antiquewhite;
+  background-color: black;
+  color: red;
+  max-width: 100%;
+  font-size: 24px;
+  align-content: center;
+  text-align: center;
+  padding: 30px;
+
+  span{
+    color: antiquewhite;
+    font-size: 60px;
+    
+  }
+
+  .section-section{
+   
+    background: black;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 60px auto;
+    border: 3px solid #8B0000;
+    
+    form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+    
+    div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    }
+
+    label {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: capitalize;
+    
+    }
+
+    input  {
+    padding: 12px 15px;
+    border: 1px solid red;
+    border-radius: 8px;
+    background: white;
+    font-size: 18px;
+    color: #333;
+    }
+
+
+  }
+
+ input[type="submit"] {
+    background-color:  #FF0000;
+    color: antiquewhite;
+    padding: 15px 30px;
+    
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    
+  }
+
+
+
 }
 
-.footer{
+
+.footer {
   grid-area: footer;
   padding: 20px;
-  background-color:antiquewhite;
-
+  background-color: antiquewhite;
 }
-
