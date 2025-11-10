@@ -31,13 +31,17 @@
   .headercontainer {
     display: flex;
     
-    justify-content: end;
+    justify-content: space-around;
     align-content: center;
     text-align: center;
     align-items: center;
+
+    
+
   }
 
-
+  
+        
   .nav {
     padding: 0rem;
     align-items: center;
@@ -58,16 +62,47 @@
       padding: 1rem;
       border-radius: 8px;
       font-size: 32px;
-      li:houver{
-        background-color: #8B0000;
-      }
+
+      
       a {
-        color: antiquewhite;
+        
         text-decoration: none;
+        /*reutilização de código do h2*/
+        background: url(./image/red-textured-background-11554006972cweuyahmmm.jpg) center;
+        background-size: cover;
+        background-clip: text;
+        color: transparent;
+        animation: animate 30s linear infinite;
       }
     }
+
+     li:hover{
+        font-weight: bold;
+        background-color: antiquewhite;
+        transition: ease-in-out 0.5s;
+    }
+     
   }
+  
 }
+/* animação do header*/
+.hlogo h2{
+      
+      font-size: 62px;
+      background: url(./image/red-textured-background-11554006972cweuyahmmm.jpg) center;
+      background-size: cover;
+      background-clip: text;
+      color: transparent;
+      animation: animate 30s linear infinite;
+
+      
+
+}
+@keyframes animate{
+      to{
+        background-position-x: 600px;
+      }
+} /*fim animação do header*/
 
 .sidenav {
   grid-area: sidenav;
